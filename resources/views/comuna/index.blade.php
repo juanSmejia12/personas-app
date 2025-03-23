@@ -18,7 +18,7 @@
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">Code</th>
+      <th scope="col">Code</th>4
       <th scope="col">Commune</th>
       <th scope="col">Municipality</th>
       <th scope="col">Actions</th>
@@ -30,7 +30,7 @@
       <th scope="row">{{ $comuna->comu_codi }}</th>
       <td>{{ $comuna->comu_nomb }}</td>
       <td>{{ $comuna->muni_nomb }}</td>
-      <td><span> Actions </span></td>
+      <td><span> Acciones </span></td>
     </tr>
     @endforeach
   </tbody>
