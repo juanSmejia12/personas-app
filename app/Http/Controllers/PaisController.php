@@ -30,6 +30,9 @@ class PaisController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -41,6 +44,15 @@ class PaisController extends Controller
      */
     public function show(string $id)
     {
+        $pais = new Departamento();
+        $pais->pais_nomb = $request->name;
+        $pais->pais_capi = $request->code;
+        $pais->save();
+
+        $pais = DB::table('tb_pais')
+            ->select('tb_pais.*')
+            ->get();
+        return view('pais.index', ['paises' => $paises]);
         //
     }
 
