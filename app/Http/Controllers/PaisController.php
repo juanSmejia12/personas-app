@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Departamento;
+use App\Models\Pais;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,8 +15,8 @@ class PaisController extends Controller
      */
     public function index()
     {
-        $paises = Departamento::all();
-        return view('pais.index', ['pais' => $paises]);
+        $paises = Pais::all();
+        return view('pais.index', ['paises' => $paises]);
         //
     }
 
@@ -36,15 +36,7 @@ class PaisController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        $pais = new Departamento();
+        $pais = new Pais();
         $pais->pais_nomb = $request->name;
         $pais->pais_capi = $request->code;
         $pais->save();
@@ -53,6 +45,14 @@ class PaisController extends Controller
             ->select('tb_pais.*')
             ->get();
         return view('pais.index', ['paises' => $paises]);
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
         //
     }
 
