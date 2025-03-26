@@ -27,3 +27,6 @@ Route::get('/comunas/{comuna}/edit', [ComunaController::class, 'edit'])->name('c
 
 //municipio
 Route::get('/municipios', [MunicipioController::class, 'index'])->name('municipios.index');
+
+//departamento
+Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
