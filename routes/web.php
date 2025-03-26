@@ -32,6 +32,9 @@ Route::get('/municipios/create', [MunicipioController::class, 'create'])->name('
 
 //departamento
 Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
+Route::post('/departamentos', [DepartamentoController::class, 'store'])->name('departamentos.store');
+Route::get('/departamentos/create', [DepartamentoController::class, 'create'])->name('departamentos.create');
+
 
 //pais
-Route::get('/paisess', [PaisController::class, 'index'])->name('paises.index');
+Route::get('/paises', [PaisController::class, 'index'])->name('paises.index');
