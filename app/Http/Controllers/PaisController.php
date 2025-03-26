@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Municipio;
+use App\Models\Departamento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class MunicipioController extends Controller
+class PaisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class MunicipioController extends Controller
      */
     public function index()
     {
-        $municipios = Municipio::all();
-        return view('municipio.index', ['municipios' => $municipios]);
+        $paises = Departamento::all();
+        return view('pais.index', ['pais' => $paises]);
         //
     }
 

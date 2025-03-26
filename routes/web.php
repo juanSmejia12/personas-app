@@ -30,3 +30,6 @@ Route::get('/municipios', [MunicipioController::class, 'index'])->name('municipi
 
 //departamento
 Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
+
+//pais
+Route::get('/paisess', [PaisController::class, 'index'])->name('paises.index');
