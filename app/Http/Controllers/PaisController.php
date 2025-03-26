@@ -22,9 +22,15 @@ class PaisController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     * 
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
+        $paises = DB::table('tb_pais')
+            ->orderBy('pais_nomb')
+            ->get();
+        return view('pais.new', ['paises' => $paises]);
         //
     }
 

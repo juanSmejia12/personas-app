@@ -35,7 +35,7 @@
     </select>
   <div class="mb-3">
     <button type="submit" class="btn btn-primary">Save</button>
-    <a href="{{ route('departamentos.index') }}" class="btn btn-waening">Cancel</a>
+    <a href="{{ route('departamentos.index') }}" class="btn btn-warning">Cancel</a>
   </div>
 </form>
     </div>
