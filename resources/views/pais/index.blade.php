@@ -30,7 +30,14 @@
       <th scope="row">{{ $pais->pais_codi }}</th>
       <td>{{ $pais->pais_nomb }}</td>
       <td>{{ $pais->pais_capi }}</td>
-      <td><span>Actions</span></td>
+      <td>
+      <form action="{{ route('paises.destroy', ['pais' => $pais->pais_codi]) }}"
+            method='POST' style="diplay: inline-block">
+            @method('delete')
+             @csrf
+             <input class="btn btn-danger" type="submit" value="Delete">
+        </form>
+       </td>
       </tr>
     @endforeach
   </tbody>

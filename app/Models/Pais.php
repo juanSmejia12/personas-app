@@ -11,4 +11,6 @@ class Pais extends Model
     protected $table = 'tb_pais';
     protected $primaryKey = 'pais_codi';
     public $timestamps = false;
-}
+    protected $keyType = 'string';
+    protected $fillable = ['pais_codi', 'pais_nomb', 'pais_capi'];
+ }
